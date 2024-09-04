@@ -1,0 +1,22 @@
+replicaCount: 1
+
+image:
+  repository: simple-rest-api
+  pullPolicy: IfNotPresent
+  tag: "dev"
+
+service:
+  type: ClusterIP
+  port: 8080
+
+postgresql:
+  postgresqlUsername: postgres_dev
+  postgresqlPassword: postgres_dev
+  postgresqlDatabase: mydb_dev
+  servicePort: 5432
+
+ingress:
+  enabled: true
+  host: dev.simple-api.local
+
+resources: {}

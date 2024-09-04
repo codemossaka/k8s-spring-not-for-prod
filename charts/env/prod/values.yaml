@@ -1,0 +1,22 @@
+replicaCount: 3
+
+image:
+  repository: simple-rest-api
+  pullPolicy: IfNotPresent
+  tag: "prod"
+
+service:
+  type: ClusterIP
+  port: 8080
+
+postgresql:
+  postgresqlUsername: postgres_prod
+  postgresqlPassword: postgres_prod
+  postgresqlDatabase: mydb_prod
+  servicePort: 5432
+
+ingress:
+  enabled: true
+  host: prod.simple-api.local
+
+resources: {}

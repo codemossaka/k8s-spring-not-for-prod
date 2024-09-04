@@ -1,0 +1,6 @@
+apiVersion: v2
+name: simple-rest-api
+description: A Helm chart for Spring Boot REST API with PostgreSQL
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
