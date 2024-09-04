@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: simple-rest-api
   pullPolicy: IfNotPresent
-  tag: "dev"
+  tag: "latest"
 
 service:
   type: ClusterIP
